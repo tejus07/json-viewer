@@ -47,7 +47,7 @@ function App() {
           <div className="bg-white rounded-lg shadow-lg p-6">
             <h2 className="text-xl font-semibold mb-4 text-gray-700">Input JSON</h2>
             <textarea
-              className={`w-full h-[500px] p-4 font-mono text-sm border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+              className={`w-full h-[70vh] p-4 font-mono text-sm border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
                 error ? 'border-red-500' : 'border-gray-200'
               }`}
               value={jsonInput}
@@ -62,7 +62,7 @@ function App() {
           {/* Viewer Section */}
           <div className="bg-white rounded-lg shadow-lg p-6">
             <h2 className="text-xl font-semibold mb-4 text-gray-700">Parsed JSON</h2>
-            <div className="border border-gray-200 rounded-lg p-4 h-[500px] overflow-auto bg-gray-50">
+            <div className="border border-gray-200 rounded-lg p-4 h-[clamp(300px, 50%, 500px)] overflow-auto bg-gray-50">
               {!error && <JsonViewer data={parsedJson} />}
             </div>
           </div>
